@@ -216,3 +216,260 @@ header {
     color: #2563eb;
     margin-bottom: 20px;
 }
+/* ===========================
+   PORTFOLIO
+=========================== */
+
+.portfolio {
+    padding: 100px 0;
+    background: #f5f7fb;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(37, 99, 235, .85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .4s;
+}
+
+.overlay h3 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.portfolio-card:hover .overlay {
+    opacity: 1;
+}
+
+/* ===========================
+   STATISTICS
+=========================== */
+
+.stats {
+    padding: 90px 0;
+    background: #2563eb;
+    color: #fff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stats-grid h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   TEAM
+=========================== */
+
+.team {
+    padding: 100px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.team-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    transition: .4s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    margin: 20px 0 10px;
+}
+
+.team-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   TESTIMONIAL
+=========================== */
+
+.testimonial {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.review-card {
+    max-width: 700px;
+    margin: auto;
+    background: #f5f7fb;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.review-card p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.review-card h4 {
+    color: #2563eb;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact {
+    padding: 100px 0;
+}
+
+#contactForm {
+    max-width: 700px;
+    margin: auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+#contactForm textarea {
+    resize: none;
+}
+
+#contactForm button {
+    width: 100%;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    background: #111827;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #bbb;
+}
+
+/* ===========================
+   BACK TO TOP
+=========================== */
+
+#topBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px) {
+
+    .hero-content,
+    .about-grid {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .team-grid,
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .team-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+}
